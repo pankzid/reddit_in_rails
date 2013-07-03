@@ -1,6 +1,11 @@
 RedditInRails::Application.routes.draw do
+  devise_for :users
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
+
+  resources :pages
+  root to: "pages#index"
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
